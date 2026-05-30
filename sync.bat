@@ -9,7 +9,7 @@ git add .
 git commit -m "auto sync: %date% %time%"
 
 :: 推送到GitHub
-git push origin master
+git push origin main 2>nul
 
 echo 同步完成！按任意键关闭窗口...
 pause > nul
