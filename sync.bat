@@ -1,4 +1,6 @@
 @echo off
+chcp 65001 > nul
+
 :: 切换到仓库目录
 cd /d F:\GithubNote\AI-Learning-Roadmap
 
