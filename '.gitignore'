@@ -1,0 +1,34 @@
+# Windows 系统垃圾
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS 系统垃圾
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 编辑器缓存文件
+*.tmp
+*.bak
+*.swp
+*~
+.*.swp
+._*
+
+# Python 相关（如果不需要可以删掉）
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+
+# 日志文件
+*.log
+logs/
+
+# 其他无关文件
+sync.bat
+auto_sync_loop.bat
+watch_and_sync.py
