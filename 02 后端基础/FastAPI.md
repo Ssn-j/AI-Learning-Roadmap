@@ -68,14 +68,29 @@ pip install fastapi uvicorn
 
 ### 2.2 最小应用
 
+创建 FastAPI 应用的核心步骤：
+
+1. 导入 `FastAPI`
+2. 创建应用实例 `app = FastAPI()`
+3. 使用装饰器（如 `@app.get()`）定义路径操作
+4. 定义路径操作函数，使用类型注解声明参数
+5. 使用 `uvicorn main:app --reload` 运行开发服务器
+
 ```python
 # main.py
 
 from fastapi import FastAPI
+
+# 步骤1：导入 FastAPI 类
+# 步骤2：创建应用实例
 app = FastAPI()
+
+# 步骤3：定义路径操作装饰器
+# 步骤4：定义路径操作函数
 @app.get("/")
-def root():
- return {"message": "Hello World"}
+async def root():
+    # 步骤5：返回响应内容
+    return {"message": "Hello World"}
 ```
 
 ### 2.3 运行
@@ -88,7 +103,15 @@ uvicorn main:app --reload
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
+参数说明：
 
+| 参数         | 说明                   |
+| ---------- | -------------------- |
+| `main`     | Python 文件名（不含 `.py`） |
+| `app`      | FastAPI 实例变量名        |
+| `--reload` | 代码修改后自动重启（仅开发用）      |
+| `--host`   | 绑定的 IP 地址            |
+| `--port`   | 绑定的端口号               |
 
 ### 2.4 自动生成的文档
 
